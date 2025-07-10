@@ -4,13 +4,14 @@ applyTo: '*'
 
 # Vibe Button
 
-A single button that connects your user to Azure OpenAI.*
+A single button that connects your user to Azure OpenAI.
 
 
 ## Vibe Button Integration Guide
 
 **Overview:**  
-`<vibe-button>` is a web component that provides a floating button for users to configure and connect to Azure OpenAI. It exposes a JavaScript API for developers to access and update settings, send chat messages, and manage session memory.
+`<vibe-button>` is a web component that provides a floating button for users to configure and connect to Azure OpenAI. 
+It exposes a JavaScript API for developers to access and update settings, send chat messages, and manage session memory.
 
 ### Installation
 
@@ -32,7 +33,7 @@ Place the button in your `<body>`:
 **Positioning:**  
 Set the `position` attribute to display the button in a specific corner (`top-left`, `top-right`, `bottom-left`, `bottom-right`). Default is `bottom-right`.
 ```html
-<vibe-button position="top-left"></vibe-button>
+<vibe-button position="bottom-left"></vibe-button>
 ```
 Note: The button is fixed and positioned via shadow DOM; use the `position` attribute, not CSS, to change its location.
 
