@@ -1,0 +1,18 @@
+{
+  "name": "vibe-template",
+  "version": "1.0.0",
+  "description": "A template for good vibes and rapid prototypes",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aipx-proto/vibe-template.git"
+  },
+  "author": "James Bradford",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
