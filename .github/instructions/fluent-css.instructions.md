@@ -1,5 +1,5 @@
 ---
-applyTo: '**/*.html'
+applyTo: '*'
 ---
 
 # Fluent.css

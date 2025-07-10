@@ -1,5 +1,5 @@
 ---
-applyTo: '**/*.(html|js)'
+applyTo: '*'
 ---
 
 # Vibe Button

@@ -1,5 +1,5 @@
 ---
-applyTo: '**/*.html'
+applyTo: '*'
 ---
 
 # Vibe Icon - Microsoft Fluent Icons Web Component
