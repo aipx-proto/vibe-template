@@ -5,6 +5,8 @@
   "main": "index.html",
   "scripts": {
     "dev": "live-server --port=4183 --no-browser",
+    "start": "live-server --port=4183 --no-browser",
+    "check-server-http-code": "curl -s -o /dev/null -w  '%{http_code}' http://localhost:4183 || echo response code ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
