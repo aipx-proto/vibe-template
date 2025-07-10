@@ -9,7 +9,7 @@ The user doesn't even know what code is.
 The user will only interact with the codebase through you as the copilot coding assistant in vscode.
 
 The user must see the app running to know anything is happening.
-- run `npm run dev` to start the live server app - this will serve the app at `http://localhost:8080`
+- run `npm run dev` to start the live server app - this will serve the app at `http://localhost:4183`
 - Prompt the user to open the project in vscode integrated 'Simple Browser' to see the app running. Call the `open_simple_browser` tool to accomplish this.
 
 This repo has instructions for dependencies:

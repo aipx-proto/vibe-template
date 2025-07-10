@@ -4,6 +4,7 @@
   "description": "A template for good vibes and rapid prototypes",
   "main": "index.html",
   "scripts": {
+    "dev": "live-server --port=4183 --no-browser",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
