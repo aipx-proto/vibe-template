@@ -5,6 +5,7 @@
 
 ## Dependencies:
 These dependencies are already included in the index.html file head.
+- `handlebars.js`: Templating engine for rendering HTML. Break up components into smaller, reusable `.hbs`  templates in `components/` directory.
 - `tailwind.css`: Utility-first CSS framework for styling.
 - `fluent.css`: Microsoft Fluent design system, integrates with Tailwind.
 - `vibe-icon`: Web component for Microsoft Fluent icons.
