@@ -1,7 +1,7 @@
 ## Project Initialization:
 - If the `<title>` tag or `<h1>` contains "Vibe Template Project", treat this as a new project.
 - In this case, remove all references to "Vibe Template" and initialize the project from scratch.
-- If you need to install js dependencies, please import them from a CDN in the `index.html` file. Do not use npm to install dependencies.
+- Please delete or replace the example.hbs file in the `components/` directory with your own components.
 
 ## Dependencies:
 These dependencies are already included in the index.html file head.
@@ -9,8 +9,8 @@ These dependencies are already included in the index.html file head.
 - `tailwind.css`: Utility-first CSS framework for styling.
 - `fluent.css`: Microsoft Fluent design system, integrates with Tailwind.
 - `vibe-icon`: Web component for Microsoft Fluent icons.
-- `vibe-button`: JavaScript library for configuring and calling LLM chat endpoints.
-Only include the vibe-button if the app needs llm chat functionality.
+- `vibe-button`: JavaScript library for configuring and calling LLM chat endpoints. Only include the vibe-button if the app needs llm chat functionality.
+- If you need to install js dependencies, please import them from a CDN in the `index.html` file. Do not use npm to install dependencies.
 
 ## Figma Integration:
 If the user references 'figma', call one of the `Figma Dev Mode MCP` tools.
