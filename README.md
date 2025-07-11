@@ -20,6 +20,13 @@ Apps are also pre-configured to integrate with [Azure OpenAI LLMs](https://ai.az
 4. In the bottom left of the chat, select the "Vibe-Coding" mode (it may say "Ask" or "Agent" by default).
 5. Prompt Copilot to make you an app.
 
+## View Your App
+
+Copilot will assist you with these steps:
+- Install the "Live Server" vscode extension
+- Click the 'Go Live' button in the bottom right of the VS Code window
+- Open a browser (or the integrated vscode "Simple Browser") to http://localhost:4183 
+
 ## Figma MCP Integration
 
 This repo connects to Figma's MCP server, allowing direct integration with your Figma desktop files. 
