@@ -1,22 +1,15 @@
 ## Project Initialization:
 - If the `<title>` tag or `<h1>` contains "Vibe Template Project", treat this as a new project.
 - In this case, remove all references to "Vibe Template" and initialize the project from scratch.
-- Please delete or replace the example.hbs file in the `components/` directory with your own components.
 
 ## Dependencies:
-These dependencies are already included in the index.html file head.
-- `handlebars.js`: Templating engine for rendering HTML.
-- `tailwind.css`: Utility-first CSS framework for styling.
-- `fluent.css`: Microsoft Fluent design system, integrates with Tailwind. **IMPORTANT: Please reinterpret all UI into as fluent.css styles and components.**
-- `vibe-icon`: Web component for Microsoft Fluent icons.
-- `vibe-button`: JavaScript library for configuring and calling LLM chat endpoints. Only include the vibe-button if the app needs llm chat functionality.
-- If you need to install js dependencies, please import them from a CDN in the `index.html` file. Do not use npm to install dependencies.
+These dependencies are already included in the `index.html` file head.
+1. `tailwind.css`: Utility-first CSS framework for styling. You must use the v4 js version that is already included in the `index.html` file.
+2. `fluent.css`: Microsoft Fluent design system, integrates with Tailwind. **IMPORTANT: Please reinterpret all UI into as fluent.css styles and components.**
+3. `vibe-icon`: Web component for Microsoft Fluent icons.
+4. `vibe-button`: JavaScript library for configuring and calling LLM chat endpoints. Only include the vibe-button if the app needs llm chat functionality.
 
-## App Structure:
-- This is a handlebars template project. Follow the Handlebars syntax and conventions for templating.
-- The main app file is `app.hbs` in the `components/` directory.
-- Don't write any code in the `index.html` file, except for the `<head>` section.
-- All UI components should be created as separate `.hbs` files in the `components/` directory.
+If you need to install js dependencies, please import them from a CDN in the `index.html` file. Do not use npm to install dependencies.
 
 ## Figma Integration:
 - If the user references 'figma', call one of the `Figma Dev Mode MCP` tools. 

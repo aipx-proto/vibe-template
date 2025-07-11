@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Todo App</title>
+  <title>Vibe Template Project</title>
   <link rel="icon" type="image/svg+xml" href="https://ai.azure.com/assets/aistudio-af17733a.svg">
 
   <!-- 1. Tailwind first -->
@@ -15,13 +15,16 @@
   <!-- 3. Vibe Icon -->
   <script src="https://esm.sh/vibe-icon@latest" type="module"></script>
 
-  <!-- 5. Handlebars.js CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.min.js"></script>
+  <!-- 4. Vibe Button -->
+  <script type="module" src="https://esm.sh/vibe-button"></script>
 </head>
 
 <body class="h-full">
-  <!-- Don't write html here, use handlebars templates loaded by scripts.js instead -->
-  <script async src="scripts.js"></script>
+  <div class="mx-auto p-12 flex flex-col items-center justify-center text-center">
+    <h1 class="text-2xl font-bold">Vibe Template</h1>
+    <p class="mt-2">Open Copilot chat and select "Vibe-Coding" mode to get started</p>
+  </div>
+  <script src="./app.js"></script>
 </body>
 
 </html>
