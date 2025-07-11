@@ -8,4 +8,4 @@ async function loadTemplate(name, data, targetSelector) {
 }
 
 loadTemplate('app', { title: 'Vibe Template Project', description: 'Open Copilot chat to get started' }, 'body');
-loadTemplate('example', { title: 'Vibe Template Project', description: 'Open Copilot chat to get started' }, '#header');
+loadTemplate('example', { title: 'Vibe Template Project', description: 'Open Copilot chat to get started' }, '#app');
