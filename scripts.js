@@ -13,9 +13,6 @@ async function loadTemplate(name, data, targetSelector) {
   document.querySelector(targetSelector).innerHTML = template(data);
 }
 
-async function main() {
-  await loadPartial('example');
-  await loadTemplate('app', {}, 'body');
-}
-
-main();
+(async () => {
+  await loadTemplate('app', { title: 'Vibe Template Project', description: 'Open Copilot chat to get started' }, 'body');
+})();
