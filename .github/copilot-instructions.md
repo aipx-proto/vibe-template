@@ -3,6 +3,7 @@
 - Edit `components/App.js` to update the main UI.
 - Add additional components in the `components/` folder as needed.
 - Open `index.html` in a browser to run the app.
+- There is a `.dark` theme class on the `<html>` tag. Remove this class to disable dark mode.
 
 ## Architecture Overview:
 - This project is a no-build, browser-native React app template for prototypes.
@@ -22,6 +23,14 @@ These dependencies are already included in the `index.html` file head.
 - If the user references 'Figma', call one of the `Figma Dev Mode MCP` tools. 
 - Call `get_image` before calling `get_code`.
 - Don't use "frame" in filenames. Give new components descriptive names based on their function or content.
+- Content with repeating elements should be handled with an array map loop in the code, rather than hardcoding each element.
+
+### Icon Usage
+Use `vibe-icon` for icons where possible. It may be difficult to identify which elements are icons. Here are some hints elements are icons:
+- icons are natively exported by figma as .svg files, but with no name
+- in cases where a `data-name="Icon"` element has no children, the icon name is likely the `data-name` of the parent element.
+- in cases where a `data-name="Icon"` element has children, the icon name is likely the `data-name` of the child element.
+- sometimes icons are exported as react components. They will have props for size=16|20 and a theme=regular|filled. In this case the component name will be the icon's name.
 
 ### Figma Troubleshooting:
 **DON'T** show these steps if you have access to any `Figma Dev Mode MCP` tools.
