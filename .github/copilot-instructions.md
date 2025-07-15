@@ -2,6 +2,7 @@
 - If the `<title>` tag or `<h1>` contains "Vibe App Template", treat this as a new project. In this case, remove all references to "Vibe App Template" and initialize the project from scratch.
 - Edit `components/App.jsx` to update the main UI.
 - Add additional components in the `components/` folder as needed.
+- Use named exports for js modules. do not use `export default`.
 - Open `index.html` in a browser to run the app.
 - There is a `.dark` theme class on the `<html>` tag. Remove this class to disable dark mode.
 
