@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Vibe Template Project</title>
+  <title>Vibe App Template</title>
   <link rel="icon" type="image/svg+xml" href="https://ai.azure.com/assets/aistudio-af17733a.svg">
 
   <!-- 1. Tailwind first -->
@@ -19,7 +19,7 @@
   <!-- 4. Vibe Button (Optional) -->
   <!-- <script type="module" src="https://esm.sh/vibe-button"></script> -->
 
-  <!-- 5. Import react -->
+  <!-- 5. Import map for React dependencies -->
   <script type="importmap">
     {
       "imports": {
@@ -29,13 +29,14 @@
     }
   </script>
 
-  <!-- 6. Babel Standalone for JSX -->
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <!-- 6. Register service worker and wait for it to be ready before calling app-loader.js -->
+  <script type="module" defer src="./runtime/register-service-worker.js"></script>
 </head>
 
 <body class="h-full" id="root">
-  <div class="flex items-center justify-center h-full"><progress class="spinner"></progress></div>
-  <script type="text/babel" src="components/App.js" data-type="module"></script>
+  <div class="flex items-center justify-center h-full">
+    <progress class="spinner"></progress>
+  </div>
 </body>
 
 </html>
