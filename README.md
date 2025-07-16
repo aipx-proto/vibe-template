@@ -3,12 +3,14 @@
 ***A template for good vibes and rapid prototypes***
 
 This template helps you configure VS Code to run in a "Vibe-Coding" chat mode, 
-allowing you to create apps through Copilot without touching code! 
+allowing you to create apps through Copilot **without touching code!** 
 
 Creates apps in Microsoft Fluent Design language using [fluent.css](https://github.com/aipx-proto/fluent-css) and [vibe-icon](https://github.com/aipx-proto/vibe-icon).
 Apps are also pre-configured to integrate with [Azure OpenAI LLMs](https://ai.azure.com/) using [vibe-button](https://github.com/aipx-proto/vibe-button). 
 
 And, it connects to [Figma desktop MCP](https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Dev-Mode-MCP-Server)
+
+This template **does not** require installing node, npm, git, python, or any other developer tools. All you need is [VS Code](https://code.visualstudio.com/) and [GitHub Copilot](https://github.com/features/copilot).
 
 ![VS Code screenshot of vibe coding layout](./assets/readme-screenshot.png)
 
