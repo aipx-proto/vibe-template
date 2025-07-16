@@ -16,7 +16,7 @@ export function setupBabel() {
   self.addEventListener("fetch", (event) => {
     const url = new URL(event.request.url);
 
-    // Only process .js and .jsx files from the same origin
+    // Only process .jsx files from the same origin
     if (url.pathname.endsWith(".jsx") && url.origin === self.location.origin) {
       event.respondWith(handleJSXRequest(event.request));
     }
@@ -29,7 +29,11 @@ async function loadBabel() {
     const response = await fetch("https://unpkg.com/@babel/standalone/babel.min.js");
     const babelCode = await response.text();
     eval(babelCode);
-    console.log("Babel standalone loaded successfully");
+    if (self.Babel) {
+      console.log("Babel standalone loaded successfully");
+    } else {
+      throw new Error("Babel not found in global scope");
+    }
   } catch (error) {
     console.error("Failed to load Babel standalone:", error);
   }
@@ -37,6 +41,9 @@ async function loadBabel() {
 
 async function handleJSXRequest(request) {
   try {
+    // Ensure Babel is loaded
+    if (!self.Babel) await loadBabel();
+
     // Fetch the original file
     const response = await fetch(request);
     const jsxCode = await response.text();
