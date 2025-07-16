@@ -13,8 +13,8 @@ Apps are also pre-configured to integrate with [Azure OpenAI LLMs](https://ai.az
 ## Setup
 
 1. Get the files in one of two ways:
-   - **Easy:** Download the [vibe-template.zip](https://github.com/aipx-proto/vibe-template/archive/refs/heads/main.zip)
-   - **Git:** Create a new repo from this repo's [template](https://github.com/new?template_name=vibe-template&template_owner=aipx-proto)
+  - **Easy:** Download the [vibe-template.zip](https://github.com/aipx-proto/vibe-template/archive/refs/heads/main.zip)
+  - **Git:** Create a new repo from this repo's [template](https://github.com/new?template_name=vibe-template&template_owner=aipx-proto)
 2. Open the project in VS Code.
 3. Open GitHub Copilot Chat (the icon is at the top-center, to the right of search).
 4. In the bottom left of the chat, select the "Vibe-Coding" mode (it may say "Ask" or "Agent" by default).
@@ -25,7 +25,7 @@ Apps are also pre-configured to integrate with [Azure OpenAI LLMs](https://ai.az
 Copilot will assist you with these steps:
 - Install the "Live Server" vscode extension
 - Click the 'Go Live' button in the bottom right of the VS Code window
-- Open a browser (or the integrated vscode "Simple Browser") to http://localhost:4183 
+- Open a browser (or the integrated vscode "Simple Browser") to http://localhost:4183
 
 ## Figma MCP Integration
 
