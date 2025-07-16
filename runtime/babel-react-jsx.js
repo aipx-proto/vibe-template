@@ -24,6 +24,7 @@ export function setupBabel() {
 }
 
 async function loadBabel() {
+  if (self.Babel) return;
   try {
     // Load Babel standalone from CDN
     const response = await fetch("https://unpkg.com/@babel/standalone/babel.min.js");
