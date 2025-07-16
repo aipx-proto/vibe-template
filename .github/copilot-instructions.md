@@ -3,16 +3,17 @@
 - Edit `components/App.jsx` to update the main UI.
 - Add additional jsx components in the `components/` folder as needed.
 - Any code with jsx syntax must end in `.jsx` to be properly transpiled by babel.
-- Use named exports for js modules. do not use `export default`.
+- Use named exports for js modules. **Do Not** use `export default`.
 - Open `index.html` in a browser to run the app.
 - There is a `.dark` theme class on the `<html>` tag. Remove this class to disable dark mode.
 
 ## Architecture Overview:
-- This project is a no-build, browser-native React app template for prototypes. There is code in the `./runtime` folder that accommodates this architecture. You do not need to modify this code.
+- This project is a no-build, browser-native React app template for prototypes. There is code in the `./runtime` folder that accommodates this architecture. **Do Not** modify the code in the `./runtime` folder.
 - All code **must** run directly in the browser, without bundler, build step or NPM
 - `index.html` must be served from an HTTP server (like Live Server) (required for service workers, won't work with `file://` protocol)
 - All libraries or modules **must** be imported from a CDN. You can add these libraries in the `<head>` of `index.html` as a `<script>` or to the `importmap` for module resolution.
 - All js is es module format, so you **must** use `import` and `export` statements for file dependencies.
+- `React` global must be imported at the top of all `.jsx` files.
 
 ## Dependencies:
 These dependencies are already included in the `index.html` file head.
@@ -28,6 +29,8 @@ These dependencies are already included in the `index.html` file head.
 - Call `get_image` before calling `get_code`.
 - Don't use "frame" in filenames. Give new components descriptive names based on their function or content.
 - Content with repeating elements should be handled with an array map loop in the code, rather than hardcoding each element.
+- Check if the mockup appears to be light or dark theme, and adjust the `index.html` `<html>` tag accordingly.
+- Text that is blue is likely an `<a>` link.
 
 ### Figma Icon Matching
 Use `vibe-icon` for icons where possible. It may be difficult to identify which elements are icons. Here are some hints elements are icons:
