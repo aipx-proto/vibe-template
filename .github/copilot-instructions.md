@@ -10,6 +10,7 @@
 ## Architecture Overview:
 - This project is a no-build, browser-native React app template for prototypes. There is code in the `./runtime` folder that accommodates this architecture. You do not need to modify this code.
 - All code **must** run directly in the browser, without bundler, build step or NPM
+- `index.html` must be served from an HTTP server (like Live Server) (required for service workers, won't work with `file://` protocol)
 - All libraries or modules **must** be imported from a CDN. You can add these libraries in the `<head>` of `index.html` as a `<script>` or to the `importmap` for module resolution.
 - All js is es module format, so you **must** use `import` and `export` statements for file dependencies.
 
