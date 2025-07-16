@@ -17,7 +17,7 @@ export function setupBabel() {
     const url = new URL(event.request.url);
 
     // Only process .js and .jsx files from the same origin
-    if ((url.pathname.endsWith(".js") || url.pathname.endsWith(".jsx")) && url.origin === self.location.origin) {
+    if (url.pathname.endsWith(".jsx") && url.origin === self.location.origin) {
       event.respondWith(handleJSXRequest(event.request));
     }
   });
