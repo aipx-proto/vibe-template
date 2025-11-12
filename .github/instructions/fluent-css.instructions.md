@@ -7,7 +7,7 @@ applyTo: '*'
 A css-only implementation of Microsoft's Fluent Design Language.
 
 Fluent.css automatically styles native HTML elements (buttons, inputs, dialogs, etc.) into Fluent themed components.
-It provides utility classes for theming, sizing, and variants, with built-in light/dark theme support.
+It provides utility classes for theming, sizing, and variants, with built-in light/dark mode support.
 Works standalone or integrates seamlessly with Tailwind CSS using the same utility class syntax.
 
 ## Import
@@ -47,6 +47,25 @@ Fluent.css integrates cleanly with Tailwind using the same class syntax and CSS 
 - Write **only** semantic HTML with utility classes
 - **DO NOT** write CSS in `<style>` elements, `.css` files, or `style=""` attributes
 - **DO NOT** write tailwind CSS in `<style>` elements—it will not apply.
+
+---
+
+## Theming
+
+To make a custom theme, override base styles using CSS `@layer theme` for colors/fonts and `@layer components` for specific element styling. 
+
+Apply theme class (`.next-gen` for example) to `<html>` or `<body>` to customize colors, fonts, and component styles. Can be combined with `.dark` and `.light` modes.
+
+```html
+<html class="next-gen dark">
+<head>
+  <link rel="stylesheet" href="https://esm.sh/gh/aipx-proto/fluent-css@main/build/fluent.css?raw" />
+  <!-- theme.css MUST come after fluent.css for proper CSS cascade -->
+  <link rel="stylesheet" href="https://esm.sh/gh/aipx-proto/fluent-css@main/styles/theme-variants/next-gen.css?raw" />
+</head>
+```
+
+The NextGen example theme implements a purple brand color, Aptos fonts, pill buttons, minimal inputs, a wrapped table, and a special `.tabs.type-elevated` style.
 
 ---
 
@@ -92,6 +111,18 @@ Applies to: `button`, `.btn`, `.btn-group`, `input`, `.input`, `.tab`, `.tabs`
 
 **Parent Inheritance**: Applying type/size/state to parent elements affects all children. Example: `.btn-group.size-sm` makes all child buttons small.
 
+#### Intent Classes
+
+Use `.intent-{type}` to style components with semantic color schemes to communicate status and criticality
+
+- `.intent-brand`: Blue brand color - Use for promotional messages, new features, primary announcements
+- `.intent-danger`: Red/error color - Use for errors, destructive actions, critical warnings, validation failures
+- `.intent-warning`: Orange/caution color - Use for warnings, important notices, cautionary messages
+- `.intent-success`: Green/positive color - Use for success messages, confirmations, completed actions
+- `.intent-info`: Gray/neutral color - Applies more high-contrast and intense gray than default and removes all brand colors. Use for informational messages, and tips
+
+**Parent Inheritance**: Applying intent to parent elements affects all children, including text colors, background colors, border colors, buttons, inputs, progress, everything.
+
 #### Position Classes
 
 Control popover positioning with `.position-{direction}-{alignment}` classes:
@@ -127,13 +158,13 @@ Default positioning: popovers use `position-above-start`, menus use `position-be
 - `link/brand`: Blue brand colors
 - `input/selected/hover/active`: Interaction states
 
-### Light/Dark Theme
+### Light/Dark Mode
 
-App defaults to light theme. Add `.dark` class to root element for dark theme.
+App defaults to light mode. Add `.dark` class to root element for dark mode.
 
 ### Typography
 
-- Font sizes: `.text-{xs|sm|md|base|lg|xl|2xl|3xl|4xl|5xl|6xl|7xl}`
+- Font sizes: `.text-{xs|sm|md|lg|xl|2xl|3xl|4xl|5xl|6xl|7xl}`
 - Font weight: `.text-{normal|semibold|bold}` (prefer `semibold` over `bold`)
 - Font family: `.text-{sans|mono|serif}` (prefer `sans`)
 
@@ -209,6 +240,30 @@ Use vibe-icon: `<vibe-icon name="heart"></vibe-icon>`
   <option>Select Option</option>
 </select>
 <textarea placeholder="Enter text"></textarea>
+```
+
+### Form Validation
+
+```html
+<!-- Use `.intent-{type}` for form validation queues -->
+<div>
+  <label for="user-email">Email Address</label>
+  <input type="email" id="user-email" placeholder="email@example.com" value="not.an.email" class="intent-danger" />
+  <span class="text-sm intent-danger text-heading">Please enter a valid email address</span>
+</div>
+```
+
+### Messages
+
+```html
+<!-- Use `.intent-{type}` to style messages -->
+<div class="intent-info">
+  <h4 class="text-lg">Scheduled Maintenance</h4>
+  <p class="text-md text-muted">
+    Scheduled maintenance will occur tonight at 2:00 AM UTC. Expected downtime is 30 minutes.
+  </p>
+  <button class="type-subtle icon-only" title="Dismiss">Dismiss</button>
+</div>
 ```
 
 ### Checkbox
@@ -336,7 +391,7 @@ Use `.menu` class **ONLY** for interactive menus with buttons/links. Menus defau
   <button>Edit</button>
   <button>Duplicate</button>
   <hr />
-  <button>Remove</button>
+  <button class="intent-danger">Delete</button>
 </div>
 ```
 
